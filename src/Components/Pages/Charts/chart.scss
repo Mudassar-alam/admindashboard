@@ -1,0 +1,18 @@
+.Featdchart{
+    flex: 4;
+    -webkit-box-shadow: 2px 4px 15px 6px #919090; 
+    box-shadow: 2px 4px 15px 6px #e6e6e6;   
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    .title{
+        align-self:flex-start ;
+        padding-left: 10px;
+        color: gray;
+    }
+
+    
+}

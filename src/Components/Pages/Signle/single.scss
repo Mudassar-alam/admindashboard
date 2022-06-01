@@ -1,0 +1,78 @@
+.singleContainer{
+    margin-top: 70px;
+
+    .top{
+        display: flex;
+        padding: 15px;
+        gap: 20px;
+        .left{
+            flex: 1;
+            -webkit-box-shadow: 2px 4px 15px 6px #919090; 
+            box-shadow: 2px 4px 15px 6px #e6e6e6;
+            padding: 10px;
+            border-radius: 10px;
+            position: relative;
+            .editButton{
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 14px;
+                padding: 2px;
+                color: white;
+                border-radius: 0px 10px 0px 5px;
+                cursor: pointer;
+                background-color: rgba(128, 0, 128, 0.479);
+            }
+            .title{
+                font-size:18px;
+                color: #919090;
+                font-weight: 500;
+                margin-bottom: 15px;
+            }
+            .item{
+                display: flex;
+                gap: 20px;
+                .itemImg{
+                    height: 100px;
+                    width: 100px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                .Details{
+                    .itemTitle{
+                        margin-bottom: 20px;
+                        color: gray;
+                        font-size: 20px;
+                    }
+                    .detailsItem{
+                        margin-bottom: 5px;
+                        font-size: 14px;
+                        .itemKey{
+                            font-weight: bold;
+                            color: gray;
+                        }
+                        .itemValue{
+                            margin-left: 10px;
+                            color: gray;
+                        }
+                    }
+                }
+            }
+        }
+        .right{
+            flex: 2;
+            -webkit-box-shadow: 2px 4px 15px 6px #919090; 
+             box-shadow: 2px 4px 15px 6px #e6e6e6;
+             border-radius: 10px;
+             .title{
+                font-size:18px;
+                color: #919090;
+                font-weight: 500;
+                margin-bottom: 15px;
+             }
+        }
+        .bottom{
+            border-radius: 10px;
+        }
+    }
+}

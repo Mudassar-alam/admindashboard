@@ -1,0 +1,133 @@
+.darMode{
+    // background-color: #121212;
+    // color: white;
+    // color: #272727;
+    .navbar{
+        background-color: rgb(15, 15, 15);
+        border-bottom: 0.5px solid rgb(78, 78, 78);
+        .wrapper{
+            
+            .top{
+                .logo{
+                    color: rgb(231, 231, 231);
+                }
+            }
+            .search{
+                background-color: rgb(243, 243, 243);
+            }
+            .items{
+                .item{
+                    color: rgb(231, 231, 231);
+                    .icon{
+                        color: rgb(231, 231, 231);
+                    }
+                }
+            }
+        }
+    }
+
+    .sidebar{
+        background-color: rgb(15, 15, 15);
+        .center{
+            ul{
+
+                .title{
+                    color: rgb(231, 231, 231);
+                }
+                li{
+                    color: black;
+
+                    &:hover{
+                        color: #1F1F1F;
+                    }
+                    span{
+                        color: rgb(231, 231, 231);
+                        &:hover{
+                            color: #1F1F1F;
+                            
+                        }
+    
+                       }
+                }
+               
+                   
+            } 
+        }
+    }
+    
+    .contentGrid{
+        background-color: #202020;
+
+        .widgets{
+            -webkit-box-shadow: 2px 4px 15px 6px black; 
+             box-shadow: 2px 4px 15px 6px black;
+             .left{
+                .title{
+                    color:rgb(231, 231, 231) ;
+                }
+                .counter{
+                    color: rgb(231, 231, 231);
+                }
+                .link{
+                    color: rgb(231, 231, 231);
+                    cursor: pointer;
+                }
+             }
+             .right{
+
+             }
+        }
+
+        .featured{
+            -webkit-box-shadow: 2px 4px 15px 6px black; 
+             box-shadow: 2px 4px 15px 6px black;
+             .top{
+                 color: rgb(231, 231, 231);
+             }
+             .bottom{
+                 .title{
+
+                     color: rgba(255, 255, 255, 0.589);
+                 }
+                 .amount{
+                    color: rgb(231, 231, 231);
+                 }
+                 .desc{
+                    color: rgba(255, 255, 255, 0.589);
+                 }
+                 .summary{
+                     .itemTitle{
+                        color: rgba(255, 255, 255, 0.589);
+                     }
+                 }
+             }
+        }
+        .Featdchart{
+            -webkit-box-shadow: 2px 4px 15px 6px black; 
+            box-shadow: 2px 4px 15px 6px black;
+            .title{
+                color: rgb(231, 231, 231);
+            }
+        }
+
+        .main-container{
+            -webkit-box-shadow: 2px 4px 15px 6px black; 
+            box-shadow: 2px 4px 15px 6px black;
+            .listTitle{
+                color: rgb(231, 231, 231);
+            }
+            .table{
+                
+                .Tablecontainer{
+                    background-color: #1F1F1F;
+                    color: rgb(231, 231, 231);
+                    .tableCell{
+                        color: rgb(231, 231, 231);
+                    }
+                }
+            }
+        }
+        
+    }
+
+}

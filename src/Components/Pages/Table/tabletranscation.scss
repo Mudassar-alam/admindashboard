@@ -1,0 +1,49 @@
+.main-container{
+    margin: 20px;
+    -webkit-box-shadow: 2px 4px 15px 6px #919090; 
+    box-shadow: 2px 4px 15px 6px #e6e6e6;
+    padding: 10px;
+    border-radius: 10px;
+
+    .listTitle{
+        font-weight: 500;
+        color: gray;
+        margin-bottom: 15px;
+    }
+    .table{
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        .cellWrapper{
+            display: flex;
+            align-items: center;
+        }
+         img{
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin-right: 10px;
+                object-fit: cover;
+        
+            }
+        .tableCell{
+            .status{
+                padding: 5px;
+                border-radius: 5px;
+    
+                &.Approved{
+                    color: green;
+                    background-color: rgba(0, 128, 0, 0.329);
+                }
+                &.Pending{
+                    color: goldenrod;
+                    background-color: rgba(218, 165, 32, 0.336);
+                }
+            }
+
+        }
+        
+        
+    }
+}
+
