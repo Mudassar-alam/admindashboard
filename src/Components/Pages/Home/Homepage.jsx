@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./homepage.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Grid from "@mui/material/Grid";
@@ -13,17 +13,19 @@ import TableTransaction from "../Table/TableTransaction";
 import Single from "../Signle/Single";
 import { productInputs, userInputs } from "../FormSource";
 import '../../Moodstyle/dark.scss';
+import { DarkModeContext } from "../../Contextapi/DarkModeContext";
 
 function Homepage() {
 
-  const [dark, setDark] = useState(false);
+  const {darkMode} = useContext(DarkModeContext)
+
 
   return (
     <>
       <Router>
-        <div className={dark?'HomeMainContainer darMode':'HomeMainContainer'}>
+        <div className={darkMode?'HomeMainContainer darMode':'HomeMainContainer'}>
           <Grid container>
-            <Navbar setDark={setDark} />
+            <Navbar/>
 
             <Grid item xl={2} sm={2} xs={2}>
               <Sidebar />

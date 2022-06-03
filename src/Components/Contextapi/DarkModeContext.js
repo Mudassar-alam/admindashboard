@@ -1,15 +1,20 @@
-//  import { createContext , useReducer} from 'react'
-//  import DarkModeReducer from './DarkModeReducer'
- 
-//   const INITIAL_STATE = {
-//      darkMode : false
-//  }
+import {  createContext, useReducer } from 'react'
+import DarkModeReducer from './DarkModeReducer'
 
-//  export const DarkModeContext = createContext(INITIAL_STATE);
+const INITIAL_STATE = {
+    darkMode:false
+}
 
-//  export const DarkModeContextProvider = ({children})=>{
-//     const [state, dispatch] = useReducer(DarkModeReducer, INITIAL_STATE);
+export const DarkModeContext = createContext(INITIAL_STATE);
 
-//     return
-//     <DarkModeContext.Provider value={{darkMode:state.darkMode,dispatch}}>{children}</DarkModeContext.Provider>
-//  }
+export const DarkModeContextProvider = ({children})=>{
+
+    const [state,dispatch] = useReducer(DarkModeReducer,INITIAL_STATE);
+
+    return(
+        <DarkModeContext.Provider value={{darkMode:state.darkMode,dispatch}}>
+            {children}
+        </DarkModeContext.Provider>
+    )
+
+}

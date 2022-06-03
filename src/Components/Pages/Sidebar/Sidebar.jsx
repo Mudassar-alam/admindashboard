@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import './sidebar.scss';
 import { Link } from 'react-router-dom';
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -14,10 +14,11 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import { DarkModeContext } from "../../Contextapi/DarkModeContext";
 
 function Sidebar() {
 
-  const toggleId = document.getElementById('linkID');
+  const {dispatch} = useContext(DarkModeContext);
   
 
 
@@ -27,7 +28,6 @@ function Sidebar() {
         <div className="center">
           <ul>
           <div>
-            {/* <button onClick={toggleNav} ><KeyboardArrowLeftIcon/></button> */}
           </div>
           <p className="title">MAIN</p>
             <li>
@@ -85,9 +85,9 @@ function Sidebar() {
           </ul>
         </div>
         <div className="bottom">
-            <div className="colorOptions"></div>
-            <div className="colorOptions"></div>
-            <div className="colorOptions"></div>
+            <div className="colorOptions" onClick={()=>dispatch({type:"LIGHT"})}></div>
+            <div className="colorOptions" onClick={()=>dispatch({type:"DARK"})}></div>
+            
         </div>
       </div>
     </>

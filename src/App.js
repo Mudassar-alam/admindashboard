@@ -4,11 +4,7 @@ import { DarkModeContextProvider } from './Components/Contextapi/DarkModeContext
 function App() {
   return (
     <>
- <Maindashboard />
-
-    {/* <DarkModeContextProvider>
-   
-    </DarkModeContextProvider> */}
+    <Maindashboard />
       
     </>
   );

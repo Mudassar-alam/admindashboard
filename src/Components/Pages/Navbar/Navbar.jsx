@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import './navbar.scss';
 import SearchIcon from '@mui/icons-material/Search';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -10,10 +10,11 @@ import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
 import Avatar from '@mui/material/Avatar';
 import Badge from '@mui/material/Badge';
 import { Link } from 'react-router-dom';
+import { DarkModeContext } from "../../Contextapi/DarkModeContext";
 
 function Navbar(){
 
-    const [toggle,setToggle] = useState(false);
+    const {dispatch} = useContext(DarkModeContext)
 
     return(
         <>
@@ -34,7 +35,7 @@ function Navbar(){
                 English
                 </div>
                 <div className="item">
-                <DarkModeOutlinedIcon className="icon"/>
+                <DarkModeOutlinedIcon className="icon" onClick={()=>dispatch({type:"TOGGLE"})} />
                 </div>
                 <div className="item">
                 <FullscreenExitOutlinedIcon className="icon" />
