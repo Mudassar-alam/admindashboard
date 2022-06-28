@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import './sidebar.scss';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import AddBusinessIcon from '@mui/icons-material/AddBusiness';
@@ -32,7 +32,7 @@ function Sidebar() {
           <p className="title">MAIN</p>
             <li>
                 <DashboardIcon className="icon"/>
-              <Link to='/' style={{textDecoration:'none'}}><span id="linkID">Dashboard</span></Link>
+              <Link  to='/' style={{textDecoration:'none'}}><span id="linkID">Dashboard</span></Link>
             </li>
             <p className="title">LISTS</p>
             <li>

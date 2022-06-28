@@ -1,10 +1,11 @@
 import logo from './logo.svg';
-import Maindashboard from './Components/Dashboard/Maindashboard';
+
 import { DarkModeContextProvider } from './Components/Contextapi/DarkModeContext';
+import Home from './Components/Pages/Home/Home';
 function App() {
   return (
     <>
-    <Maindashboard />
+    <Home />
       
     </>
   );
