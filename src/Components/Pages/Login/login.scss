@@ -1,0 +1,41 @@
+.loginContainer{
+    display: flex;
+    background-color:rebeccapurple;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    .formDiv{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 50px;
+        border-radius: 5px;
+        input{
+            margin: 3px;
+            height: 30px;
+        }
+        .btn{
+            padding: 10px;
+            background-color: white;
+            border: 1px solid rebeccapurple;
+            color: rebeccapurple;
+
+            cursor: pointer;
+            &:hover{
+                background-color: rebeccapurple;
+                color: white;
+            }
+            
+        }
+        span{
+            color:red;
+            align-items: center;
+            font-size: 12px;
+        }
+    }
+
+    
+}
