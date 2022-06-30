@@ -1,15 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom/client";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { DarkModeContextProvider } from './Components/Contextapi/DarkModeContext';
-
-ReactDOM.render(
+import { StyledEngineProvider } from '@mui/material/styles';
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
+  <StyledEngineProvider>
   <DarkModeContextProvider>
   <App />
   </DarkModeContextProvider>
+  </StyledEngineProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

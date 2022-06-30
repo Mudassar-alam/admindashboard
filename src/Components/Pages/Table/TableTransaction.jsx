@@ -88,7 +88,7 @@ function TableTransaction(props) {
                     </TableCell>
                     <TableCell className="tableCell">
                       <div className="cellWrapper">
-                        <img src={row.img} clasName="image" />
+                        <img src={row.img} className="image" />
                         {row.product}
                       </div>
                     </TableCell>

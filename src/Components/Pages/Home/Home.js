@@ -6,7 +6,8 @@ import {
   Route,
   Routes,
   Switch,
-  Navigate
+  Navigate,
+  useNavigate,
 } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Sidebar from "../Sidebar/Sidebar";
@@ -29,29 +30,21 @@ import Login from "../Login/Login";
 function Home() {
   const { darkMode } = useContext(DarkModeContext);
 
-  // const PrivateRout = ({ children })=>{
-  //   const currUser = useRef(false);
-
-  //   useEffect(({ children })=>{
-  //  return   currUser ? children : <Navigate to='login' />
-  //   },[currUser])
-
-  //   return   currUser ? children : <Navigate to='login' />
-  // }
   const currentUser = true;
 
-
-
-
   const RequiredAuth = ({ children }) => {
-    console.log(currentUser)
-    return currentUser ? (children) : <Login />
+    console.log(currentUser);
+    return currentUser ? children : <Login />;
     //<Navigate to='login' />
-  }
+  };
 
   // useEffect(()=>{
-  //   const currentUser = false;
-  // },[])
+  //   const RequiredAuth = ({ children }) => {
+  //     console.log(currentUser)
+  //     return currentUser ? (children) :<Navigate to='login'/>
+  //     //<Navigate to='login' />
+  //   }
+  // },[currentUser])
 
   return (
     <>
@@ -60,34 +53,36 @@ function Home() {
       >
         <BrowserRouter>
           <Routes>
-            <Route path="login" element={<Login />} />
+            <Route redirect path="/login" element={<Login />} />
           </Routes>
           <RequiredAuth>
             <Grid container>
               <Navbar />
-              {console.log('3232')}
+
               <Grid item xl={2} sm={2} xs={2}>
                 <Sidebar />
               </Grid>
               <Grid item xl={10} sm={10} xs={10} className="contentGrid">
                 <Routes>
-
                   <Route path="/" element={<OtherHomeWidgets />} />
                   <Route path="users">
                     <Route index element={<List />} />
-                    <Route path=":userId" element={<Single />} />
+                    <Route path="userid" element={<Single />} />
+                    
                     <Route
                       path="new"
-                      element={<New inputs={userInputs} title="Add New User" />}
+                      element={<New input={userInputs} title="Add New User" />}
                     />
                   </Route>
+                  
+
                   <Route path="products">
                     <Route index element={<List />} />
                     <Route path=":productId" element={<Single />} />
                     <Route
                       path="new"
                       element={
-                        <New inputs={productInputs} title="Add New Product" />
+                        <New input={productInputs} title="Add New Product" />
                       }
                     />
                   </Route>
@@ -95,7 +90,6 @@ function Home() {
               </Grid>
             </Grid>
           </RequiredAuth>
-
         </BrowserRouter>
       </div>
     </>
