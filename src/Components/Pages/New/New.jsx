@@ -12,11 +12,13 @@ import {
 import { auth, db, getStorage, storage } from "../../Firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { useNavigate } from "react-router-dom";
 
 function New({ input, title, button }) {
   const [file, setFile] = useState();
   const [data, setData] = useState({});
-  const [per,setPer] = useState();
+  const [per, setPer] = useState();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fileUpload = () => {
@@ -85,14 +87,13 @@ function New({ input, title, button }) {
         },
         console.log(res)
       );
+      navigate(-1);
+      alert("User is Added Successfully..!");
     } catch (err) {
       console.log(err);
     }
   };
 
-  // console.log(data);
-
-  // console.log(file)
   return (
     <>
       <div className="newContainer">
@@ -119,7 +120,7 @@ function New({ input, title, button }) {
               </div>
               {input.map((item) => {
                 return (
-                  <div className="formInput" key={input.id}>
+                  <div className="formInput" key={item.id}>
                     <label>{item.label}</label>
                     <input
                       id={item.id}
@@ -131,7 +132,9 @@ function New({ input, title, button }) {
                 );
               })}
 
-              <button type="submit" disabled={per !== null & per<100}>{title}</button>
+              <button type="submit" disabled={(per !== null) & (per < 100)}>
+                {title}
+              </button>
             </form>
           </div>
         </div>

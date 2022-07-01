@@ -65,3 +65,18 @@
         }
     }
 }
+.viewButton{
+    padding: 5px 8px;
+    border-radius: 5px;
+    color: darkblue;
+    border:1px dotted rgba(0, 0, 139, 0.288);
+    cursor: pointer;
+}
+.deleteButton{
+    padding: 5px 8px;
+    margin-left: 15px;
+    border-radius: 5px;
+    color: red;
+    border:1px dotted rgba(255, 0, 0, 0.288);
+    cursor: pointer;
+}
